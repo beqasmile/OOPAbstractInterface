@@ -44,7 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clear\IClearable.cs" />
+    <Compile Include="MailFolder\IMail.cs" />
+    <Compile Include="MailFolder\MailServer.cs" />
     <Compile Include="PersonFolder\Student.cs" />
+    <Compile Include="PersonFolder\StudentBaseClass.cs" />
+    <Compile Include="PersonFolder\StudentUniv.cs" />
     <Compile Include="Printer\IPrintable.cs" />
     <Compile Include="LessonFolder\Lesson.cs" />
     <Compile Include="Printer\MyPrinter.cs" />

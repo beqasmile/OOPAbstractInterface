@@ -1,6 +1,6 @@
 ﻿using OOPAbstractInterface.Clear;
 using OOPAbstractInterface.LessonFolder;
-
+using OOPAbstractInterface.MailFolder;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,8 +24,10 @@ namespace OOPAbstractInterface.PersonFolder
             Person person4 = new Person(4, "dana");
 
 
-            Student student1 = new Student(5, "moshe student", 222, "ironi hey");
 
+            Student student1 = new Student(5, "moshe student", 222, "ironi hey");
+            StudentUniv studentUniv = new StudentUniv(6, "student ununv 1", 333, "Bar Ilan", "Bilding 1", "First");
+            Person person5 = new StudentUniv(7, "student ununv 2", 555, "Bar Ilan", "Bilding 1", "First");
 
             IPrintable printable1 = lesson1;
             IClearable clearable1 = lesson1;
@@ -57,6 +59,17 @@ namespace OOPAbstractInterface.PersonFolder
             MyPrinter myPrinter = new MyPrinter("http://ddd.com", 1, 1);
 
             PrinterWork.PrintAll(myPrinter,allPrintables);
+
+
+            List<IMail> mailsList = new List<IMail>();
+            mailsList.Add((IMail)studentUniv);
+            mailsList.Add((IMail)person5);
+
+
+            if (person1.CompareTo(person2)>0)
+            {
+
+            }
 
         }
     }

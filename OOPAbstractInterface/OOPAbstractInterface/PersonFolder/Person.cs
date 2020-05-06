@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace OOPAbstractInterface.PersonFolder
 {
-    public class Person : IPrintable, IClearable
+    public class Person : IPrintable, IClearable , IComparable
     {
         private int id;
         private string name;
@@ -31,6 +31,28 @@ namespace OOPAbstractInterface.PersonFolder
         {
             this.name = "";
             this.surname = "";
+        }
+
+        /// <summary>
+        /// Compares two Persons if one person is equal to other returns 0 
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public int CompareTo(object obj)
+        {
+            Person otherPerson = (Person)obj;
+            if (otherPerson.id == this.id)
+            {
+                return 0;
+            }
+            else if (otherPerson.id>this.id)
+            {
+                return 1;
+            }
+            else // (otherPerson.id<this.id)
+            {
+                return -1;
+            }
         }
 
         public string GetFullPersonName()

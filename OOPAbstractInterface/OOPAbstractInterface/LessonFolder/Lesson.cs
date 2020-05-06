@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OOPAbstractInterface.LessonFolder
 { 
-    public class Lesson :IPrintable, IClearable
+    public class Lesson :IPrintable, IClearable ,IComparable
     {
         private int lessonID;
         private string lessonName;
@@ -29,6 +29,11 @@ namespace OOPAbstractInterface.LessonFolder
             lessonName = "";
             lessonID = -1;
             lessonHoursLong = -1;
+        }
+
+        public int CompareTo(object obj)
+        {
+            throw new NotImplementedException();
         }
 
         public int getPrintPagesCount()
