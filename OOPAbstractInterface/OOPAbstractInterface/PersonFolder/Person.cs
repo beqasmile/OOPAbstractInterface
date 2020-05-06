@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OOPAbstractInterface.Clear;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Sockets;
@@ -6,9 +7,9 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOPAbstractInterface 
+namespace OOPAbstractInterface.PersonFolder
 {
-    public class Person : IPrintable
+    public class Person : IPrintable, IClearable
     {
         private int id;
         private string name;
@@ -24,6 +25,12 @@ namespace OOPAbstractInterface
         {
             this.id = id;
             this.name = name;
+        }
+
+        public void Clear()
+        {
+            this.name = "";
+            this.surname = "";
         }
 
         public string GetFullPersonName()

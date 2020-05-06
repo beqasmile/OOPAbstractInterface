@@ -43,10 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clear\IClearable.cs" />
+    <Compile Include="PersonFolder\Student.cs" />
     <Compile Include="Printer\IPrintable.cs" />
-    <Compile Include="Lesson\Lesson.cs" />
+    <Compile Include="LessonFolder\Lesson.cs" />
     <Compile Include="Printer\MyPrinter.cs" />
-    <Compile Include="Person\Person.cs" />
+    <Compile Include="PersonFolder\Person.cs" />
     <Compile Include="Printer\PrinterWork.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

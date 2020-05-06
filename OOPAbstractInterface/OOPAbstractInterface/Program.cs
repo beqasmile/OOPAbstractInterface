@@ -1,10 +1,13 @@
-﻿using System;
+﻿using OOPAbstractInterface.Clear;
+using OOPAbstractInterface.LessonFolder;
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOPAbstractInterface
+namespace OOPAbstractInterface.PersonFolder
 {
     class Program
     {
@@ -21,9 +24,23 @@ namespace OOPAbstractInterface
             Person person4 = new Person(4, "dana");
 
 
-            IPrintable printable1 = lesson1;
-            IPrintable printable2 = person2;
+            Student student1 = new Student(5, "moshe student", 222, "ironi hey");
 
+
+            IPrintable printable1 = lesson1;
+            IClearable clearable1 = lesson1;
+
+
+            IPrintable printable2 = person2;
+            IClearable clearable2 = lesson2;
+
+
+            IPrintable printable3 = student1;
+            IClearable clearable3 = student1;
+
+
+            clearable1.Clear();
+           
 
             List<IPrintable> allPrintables = new List<IPrintable>();
 
@@ -34,6 +51,7 @@ namespace OOPAbstractInterface
             allPrintables.Add(person2);
             allPrintables.Add(person3);
             allPrintables.Add(person4);
+            allPrintables.Add(student1);
 
 
             MyPrinter myPrinter = new MyPrinter("http://ddd.com", 1, 1);
